@@ -3,7 +3,6 @@ package view;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -19,7 +18,7 @@ public class HomeBarPanel extends JPanel{
 		this.homeBarPanel = this;
 		
 //		this.setSize(1024, 80);
-		this.setPreferredSize(new Dimension(1024,65));
+		this.setPreferredSize(new Dimension(1024, 80));
 		//this.setLocation(0, 0);
 		this.setBackground(Color.DARK_GRAY);
 		this.setLayout(new BorderLayout());
