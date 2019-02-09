@@ -18,8 +18,8 @@ public class HomeBarPanel extends JPanel{
 		this.projectPage = projectPage;
 		this.homeBarPanel = this;
 		
-		//this.setSize(1024, 80);
-		this.setPreferredSize(new Dimension(1024, 80));
+//		this.setSize(1024, 80);
+		this.setPreferredSize(new Dimension(1024,65));
 		//this.setLocation(0, 0);
 		this.setBackground(Color.DARK_GRAY);
 		this.setLayout(new BorderLayout());
