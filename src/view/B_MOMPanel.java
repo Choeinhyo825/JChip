@@ -6,6 +6,8 @@ import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -82,8 +84,9 @@ public class B_MOMPanel extends JPanel implements ActionListener{
 		// 회의록 리스트 올릴 리스트
 		JList MOMList = new JList(MOMExample);
 		MOMList.setFont(new Font("", Font.HANGING_BASELINE, 20));
-
 		MOMList.setBorder(BorderFactory.createLineBorder(Color.black, 1));
+		MOMList.addMouseListener(new ListEvent());
+		
 
 		// 스크롤러에 리스트 올리기
 		JScrollPane scroller = new JScrollPane(MOMList);
@@ -121,7 +124,16 @@ public class B_MOMPanel extends JPanel implements ActionListener{
 		}
 	}
 
-
-		
+	
+	private class ListEvent extends MouseAdapter{
+		@Override
+		public void mouseClicked(MouseEvent e) {
+				
+					new testPU();
+			
+		}
+	}
 
 }
+
+
