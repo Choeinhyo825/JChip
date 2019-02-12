@@ -72,7 +72,7 @@ public class B_ProjectPage extends JPanel{
 		gc.weighty = 0.1;
 		gc.gridwidth = GridBagConstraints.REMAINDER;
 		gc.gridheight = 1;
-		gridbag.setConstraints(new B_MOMPanel(this), gc);
+		gridbag.setConstraints(new B_MOMPanel(this, mainFrame), gc);
 		//new MOMPanel(this);
 		
 		this.setVisible(true);

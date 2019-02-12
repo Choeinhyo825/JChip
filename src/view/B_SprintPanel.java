@@ -83,7 +83,7 @@ public class B_SprintPanel extends JPanel implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 
 		if(e.getSource() == newSprintButton) {
-			new B_NewSprintPopUp(this.mainFrame).getNewSprintPopUp().setVisible(true);;
+			new B_NewSprintPopUp(this.mainFrame).getNewSprintPopUp().setVisible(true);
 		}
 	}
 	

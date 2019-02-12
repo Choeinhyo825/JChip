@@ -18,31 +18,28 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 
-public class B_MOMPanel extends JPanel implements ActionListener{
-	
+public class B_MOMPanel extends JPanel implements ActionListener {
+
 	private B_MOMPanel momPanel;
 	private MainFrame mainFrame;
 	private JButton newMOMButton;
-	
-	public B_MOMPanel(B_ProjectPage projectPage) {
-		
+
+	public B_MOMPanel(B_ProjectPage projectPage, MainFrame mainFrame) {
+
 		this.mainFrame = mainFrame;
-		this.setSize(274, 688);
-		//this.setPreferredSize(new Dimension(274, 688));
-		//this.setLocation(750, 80);
-		
-		//this.setBackground(Color.YELLOW);
+		// this.setSize(274, 688);
+		// this.setPreferredSize(new Dimension(274, 688));
+		// this.setLocation(750, 80);
+		this.setBackground(Color.LIGHT_GRAY);
+		this.setLayout(new BorderLayout());
 
 		JTextField temp = new JTextField("회의록칸");
 		this.add(temp);
 
-
-
-
 		// this.setSize(350, 688);
-		//this.setPreferredSize(new Dimension(350, 688));
+		// this.setPreferredSize(new Dimension(350, 688));
 		// this.setLocation(0, 80);
-		//this.setBackground(Color.LIGHT_GRAY);
+		// this.setBackground(Color.LIGHT_GRAY);
 		this.setLayout(new BorderLayout());
 
 		// 회의록 정보가 들어갈 패널
@@ -86,7 +83,6 @@ public class B_MOMPanel extends JPanel implements ActionListener{
 		MOMList.setFont(new Font("", Font.HANGING_BASELINE, 20));
 		MOMList.setBorder(BorderFactory.createLineBorder(Color.black, 1));
 		MOMList.addMouseListener(new ListEvent());
-		
 
 		// 스크롤러에 리스트 올리기
 		JScrollPane scroller = new JScrollPane(MOMList);
@@ -114,26 +110,21 @@ public class B_MOMPanel extends JPanel implements ActionListener{
 		//
 		// projectPage.add(this);
 	}
-	
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == newMOMButton) {
 			new B_MOMPopUp(this.mainFrame).getMomPopup().setVisible(true);
-			;
 		}
 	}
 
-	
-	private class ListEvent extends MouseAdapter{
+	private class ListEvent extends MouseAdapter {
 		@Override
 		public void mouseClicked(MouseEvent e) {
-				
-					new testPU();
-			
+
+			new testPU();
+
 		}
 	}
 
 }
-
-

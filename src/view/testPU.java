@@ -9,6 +9,9 @@ import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
 public class testPU extends JFrame {
+	
+	
+	
 	public testPU() {
 		JFrame mf = new JFrame("tset");
 		mf.setBounds(150, 150, 515, 620);

@@ -92,9 +92,11 @@ public class B_MOMPopUp extends JPanel{
 		plusButton.setFont(new Font("", Font.PLAIN, 20));
 		plusButton.setLocation(440, 175);
 		plusButton.setOpaque(false);
+		plusButton.setContentAreaFilled(false);
 		plusButton.setBackground(Color.lightGray);
 		plusButton.setBorder(null);
 		plusButton.setSize(30, 40);
+		plusButton.setToolTipText("참석자 추가");
 
 		Mompopup.add(plusButton);
 
@@ -118,6 +120,19 @@ public class B_MOMPopUp extends JPanel{
 				name.requestFocus();
 
 			}
+		});
+		//엔터 눌러도 추가됨
+		name.addKeyListener(new KeyAdapter() {
+
+			@Override
+			public void keyTyped(KeyEvent e) {
+
+				if(e.getKeyChar() == '\n') {
+					person.append(name.getText() + "  ");
+					name.setText("");
+				}
+			}
+
 		});
 
 		//내용 라벨
@@ -156,7 +171,7 @@ public class B_MOMPopUp extends JPanel{
 		cancelBtn.setSize(90, 40);
 		Mompopup.add(cancelBtn);
 
-		// 취소버튼 클릭시 스프린트 생성 팝업창 닫힘
+		// 취소버튼 클릭시 팝업창 닫힘
 		cancelBtn.addActionListener(new ActionListener() {
 
 			@Override
