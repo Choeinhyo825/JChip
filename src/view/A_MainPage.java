@@ -48,7 +48,7 @@ public class A_MainPage extends JPanel {
       
       upup.setPreferredSize(new Dimension(1024,65));
       upup.setLayout(new BorderLayout());
-      upup.setBackground(Color.GRAY);
+      upup.setBackground(Color.LIGHT_GRAY);
       
       //상단 홈 버튼
       
@@ -71,7 +71,7 @@ public class A_MainPage extends JPanel {
             JPanel findpanel = new JPanel();
             findpanel.setPreferredSize(new Dimension(100,65));
             findpanel.setLayout(new FlowLayout());
-            findpanel.setBackground(Color.GRAY);
+            findpanel.setBackground(Color.LIGHT_GRAY);
             
             JButton find = new JButton(new ImageIcon("images/serch.PNG"));
             ImageIcon find2 = new ImageIcon("images/serch2.PNG");
@@ -114,7 +114,7 @@ public class A_MainPage extends JPanel {
       
       JPanel side = new JPanel();
       side.setPreferredSize(new Dimension(200,768));
-      side.setBackground(Color.CYAN);
+      side.setBackground(Color.decode("#4da5cd")); //@@@@@@@@@@@@@@@@@@@@@@@@@  a5ace1
       
       JButton pro = new JButton("새 프로젝트 추가");
       pro.setSize(150,50);
@@ -127,14 +127,14 @@ public class A_MainPage extends JPanel {
       this.add(side, BorderLayout.WEST);
       
       projectbtnPanel.setSize(800, 768);
-      projectbtnPanel.setBackground(Color.YELLOW);
       projectbtnPanel.setLayout(new BorderLayout());
       
       newprojectbtnPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
-      newprojectbtnPanel.setBackground(Color.YELLOW);
+      newprojectbtnPanel.setBackground(Color.white); //@@@@@@@@@@@@@@@@@@@@@@@@@  aad5d0
       
       JPanel ingPanel = new JPanel();
       ingPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
+      ingPanel.setBackground(Color.decode("#aad5d0")); //@@@@@@@@@@@@@@@@@@@@@@@@@  4da5cd
       JLabel ingLabel = new JLabel("진행중인 프로젝트");
       ingPanel.add(ingLabel);
       

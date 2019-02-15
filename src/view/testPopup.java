@@ -26,7 +26,7 @@ public class testPopup extends JPanel {
 
 		try (ObjectInputStream objIn = new ObjectInputStream(new FileInputStream("MOMList/MOM_회의명.txt"))) {
 			 System.out.println(objIn.readObject());
-			MOM str = (MOM) (objIn.readObject());
+//			MOM str = (MOM) (objIn.readObject());
 			// ta.append(str); @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 수정해야함 
 
 		} catch (Exception e) {

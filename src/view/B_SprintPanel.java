@@ -58,13 +58,9 @@ public class B_SprintPanel extends JPanel implements ActionListener {
 		
 		//스프린트생성버튼, 스프린트 리스트 패널
 		JPanel sprintPanel = new JPanel();
-		//sprintPanel.setBackground(Color.WHITE);
-		sprintPanel.setBackground(B_ProjectPage.BG_COLOR);
-		
 		sprintPanel.setLayout(new BorderLayout());
 		
 		JPanel newSprintPanel = new JPanel();
-		//newSprintPanel.setBackground(Color.WHITE);
 		newSprintPanel.setBackground(B_ProjectPage.BG_COLOR);
 		newSprintPanel.setLayout(new FlowLayout(FlowLayout.TRAILING));
 		
@@ -77,9 +73,7 @@ public class B_SprintPanel extends JPanel implements ActionListener {
 		
 		//스프린트 생성 버튼에 이벤트 연결
 		newSprintButton.addActionListener(this);
-		
 		newSprintPanel.add(newSprintButton, "North");
-
 		sprintPanel.add(newSprintPanel, "North");
 		
 		
@@ -87,9 +81,9 @@ public class B_SprintPanel extends JPanel implements ActionListener {
 		sprintModel =  new DefaultListModel();
 		//스프린트 리스트 올릴 리스트
 		sprintJList = new JList(sprintModel);
+//		sprintJList.setBackground(Color.decode("#e3e5f7")); //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 		sprintJList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		sprintJList.setToolTipText("더블클릭시 해당 스프린트로 이동");
-		
 		//스프린트리스트에 이벤트 연결
 		sprintJList.addMouseListener(new MouseAdapter() {
 			
@@ -115,13 +109,12 @@ public class B_SprintPanel extends JPanel implements ActionListener {
 		});*/
 		
 		
-		sprintJList.setBorder(BorderFactory.createLineBorder(Color.black, 1));
+		sprintJList.setBorder(BorderFactory.createLineBorder(Color.white, 1));
 		//스크롤러에 리스트 올리기
 		JScrollPane scroller = new JScrollPane(sprintJList);
 		//scroller.setPreferredSize(new Dimension(350, 1000));
 		//scroller.setLocation(0, 0);
 		sprintPanel.add(scroller, "Center");
-		
 		
 		
 		

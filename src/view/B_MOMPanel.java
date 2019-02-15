@@ -83,7 +83,7 @@ public class B_MOMPanel extends JPanel implements ActionListener {
 				}
 			}
 		});
-		MOMJList.setBorder(BorderFactory.createLineBorder(Color.black, 1));
+//		MOMJList.setBorder(BorderFactory.createLineBorder(Color.white,));
 		// 스크롤러에 리스트 올리기
 		JScrollPane scroller = new JScrollPane(MOMJList);
 		MOMPanel.add(scroller, "Center");

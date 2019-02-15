@@ -30,7 +30,6 @@ public class B_ProjectPage extends JPanel{
 		this.selectedProject = selectedProject;
 		
 		this.setSize(1024, 768);
-		this.setBackground(Color.BLUE);
 		GridBagLayout gridbag = new GridBagLayout();
 		this.setLayout(gridbag);
 		GridBagConstraints gc = new GridBagConstraints();

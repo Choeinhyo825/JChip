@@ -42,14 +42,14 @@ public class B_HomeBarPanel extends JPanel implements MouseListener, ActionListe
 		// this.setSize(1024, 80);
 		this.setPreferredSize(new Dimension(1024, 65));
 		// this.setLocation(0, 0);
-		this.setBackground(Color.GRAY);
+		this.setBackground(Color.lightGray); // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 		this.setLayout(new BorderLayout());
 
 		// 홈버튼과 뒤로가기 버튼을 올리는 패널
 		JPanel West_Panel = new JPanel();
 		West_Panel.setPreferredSize(new Dimension(130, 65));
 		West_Panel.setLayout(new BorderLayout());
-		West_Panel.setBackground(Color.GRAY);
+		West_Panel.setBackground(Color.lightGray);// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 		// 홈버튼
 		homeButton = new JButton(new ImageIcon("images/home.PNG"));
@@ -81,11 +81,11 @@ public class B_HomeBarPanel extends JPanel implements MouseListener, ActionListe
 		Center_Panel.setPreferredSize(new Dimension(300, 65));
 		Center_Panel.setLayout(new BoxLayout(Center_Panel, BoxLayout.Y_AXIS));
 		// Center_Panel.setLayout(null);
-		Center_Panel.setBackground(Color.GRAY);
+		Center_Panel.setBackground(Color.lightGray); //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 		JPanel pro_Panel = new JPanel();
 		pro_Panel.setPreferredSize(new Dimension(100, 10));
-		pro_Panel.setBackground(Color.GRAY);
+		pro_Panel.setBackground(Color.lightGray); //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 		// 진행바
 		JProgressBar progressBar = new JProgressBar();
@@ -121,7 +121,7 @@ public class B_HomeBarPanel extends JPanel implements MouseListener, ActionListe
 		JPanel East_Panel = new JPanel();
 		East_Panel.setPreferredSize(new Dimension(120, 65));
 		East_Panel.setLayout(new BorderLayout());
-		East_Panel.setBackground(Color.gray);
+		East_Panel.setBackground(Color.lightGray);
 
 		// 사용자 버튼
 		User_btn = new JButton(new ImageIcon("images/user.PNG"));
@@ -144,7 +144,6 @@ public class B_HomeBarPanel extends JPanel implements MouseListener, ActionListe
 		Member_btn.setFocusPainted(false);
 		Member_btn.setContentAreaFilled(false);
 		Member_btn.setRolloverIcon(Member_addIcon);
-		Member_btn.setBackground(Color.GRAY);
 		Member_btn.setLocation(920, 12);
 		Member_btn.setSize(40, 40);
 
