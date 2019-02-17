@@ -48,8 +48,9 @@ public class C_CreatePU extends JPanel{
 		Dimension dim = tk.getScreenSize();
 		int xPos = (dim.width /2 )  - (cp.getWidth() / 2);
 		int yPos = (dim.height / 2) - (cp.getHeight() / 2);
-		
 		cp.setLocation(xPos, yPos);
+		cp.setUndecorated(true);
+		cp.setBackground(B_ProjectPage.POPUP_COLOR);
 		
 		JLabel wL = new JLabel("할일 이름");	
 		wL.setLocation(30, 4);

@@ -121,7 +121,7 @@ public class A_MainPage extends JPanel {
       pro.setLocation(10,150);
       //pro.addMouseListener(new MyMouseAdapter1());;
       pro.addActionListener(new ProEvent());
-      
+      side.setLayout(null); 
       side.add(pro);
       
       this.add(side, BorderLayout.WEST);

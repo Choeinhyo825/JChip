@@ -15,6 +15,7 @@ import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.util.Date;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -88,8 +89,7 @@ public class B_newMOMPopUp extends JPanel {
 		writerLabel.setLocation(40, 115);
 		writerLabel.setSize(100, 45);
 		writerLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
-		// ±Û¾¾»ö±ò Èò»öÀ¸·Î º¯°æ
-		// writerLabel.setForeground(Color.WHITE);
+		writerLabel.setForeground(Color.WHITE); //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 		newMompopup.add(writerLabel);
 
@@ -103,11 +103,18 @@ public class B_newMOMPopUp extends JPanel {
 		DayLabel.setLocation(280, 115);
 		DayLabel.setSize(140, 40);
 		DayLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
-		// ±Û¾¾»ö±ò Èò»öÀ¸·Î º¯°æ
-		// DayLabel.setForeground(Color.WHITE);
+		DayLabel.setForeground(Color.WHITE); //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 		newMompopup.add(DayLabel);
 		// ´Þ·Â
 		JXDatePicker Day = new DatePicker().getDatePicker();
+		//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+		JButton btn_pick = (JButton) Day.getComponent(1);
+		ImageIcon startIcon = new ImageIcon("images/Calendar.png");
+		btn_pick.setIcon(startIcon);
+		btn_pick.setBorderPainted(false);
+		btn_pick.setFocusPainted(false);
+		btn_pick.setContentAreaFilled(false);
+		//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 		Day.setLocation(330, 120);
 		Day.setSize(140, 40);
 		Day.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 15));
@@ -117,8 +124,7 @@ public class B_newMOMPopUp extends JPanel {
 		attend.setLocation(40, 175);
 		attend.setSize(100, 45);
 		attend.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
-		// ±Û¾¾»ö±ò Èò»öÀ¸·Î º¯°æ
-		// attend.setForeground(Color.WHITE);
+		attend.setForeground(Color.WHITE); //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 		newMompopup.add(attend);
 
 		// Âü¼®ÀÚ TextÇÊµå
@@ -137,16 +143,14 @@ public class B_newMOMPopUp extends JPanel {
 		// Âü¼®ÀÚ ÀÔ·ÂÈÄ +¹öÆ° Å¬¸¯½Ã ¾Æ·¡ textArea·Î ³Ñ¾î°¡¾ß ÇÔ
 		plusButton = new JButton("+");
 
-		plusButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
+		plusButton.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 30));
 		plusButton.setLocation(440, 175);
 		plusButton.setOpaque(false);
 		plusButton.setContentAreaFilled(false);
-		plusButton.setBackground(Color.lightGray);
+		plusButton.setForeground(Color.WHITE); //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 		plusButton.setBorder(null);
 		plusButton.setSize(30, 40);
 		plusButton.setToolTipText("Âü¼®ÀÚ Ãß°¡");
-		// ±Û¾¾»ö±ò Èò»öÀ¸·Î º¯°æ
-		// plusButton.setForeground(Color.WHITE);
 
 		newMompopup.add(plusButton);
 
@@ -194,14 +198,11 @@ public class B_newMOMPopUp extends JPanel {
 		text.setLocation(40, 300);
 		text.setSize(100, 45);
 		text.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
-		// ±Û¾¾»ö±ò Èò»öÀ¸·Î º¯°æ
-		// text.setForeground(Color.WHITE);
+		text.setForeground(Color.WHITE); //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 		newMompopup.add(text);
 
 		// ³»¿ë ÀÛ¼º Ä­
-		JTextArea description = new JTextArea("³»¿ë ÀÛ¼º", 3,
-
-				30);
+		JTextArea description = new JTextArea("³»¿ë ÀÛ¼º", 3, 30);
 		description.setLocation(130, 300);
 		description.setSize(350, 220);
 		newMompopup.add(description);

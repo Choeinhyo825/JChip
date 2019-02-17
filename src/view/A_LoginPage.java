@@ -73,7 +73,7 @@ public class A_LoginPage extends JPanel {
 		// mainPanel.setLayout(new BoxLayout(mainPanel,BoxLayout.Y_AXIS));
 		mainPanel.setLayout(new BorderLayout());
 		mainPanel.setOpaque(false);//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-		JLabel logoimage = new JLabel(new ImageIcon("images/logo.PNG"));//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+		JLabel logoimage = new JLabel(new ImageIcon("images/logo2.PNG"));//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 		logoimage.setPreferredSize(new Dimension(100, 300));
 
 		mainPanel.add(logoimage, BorderLayout.NORTH);

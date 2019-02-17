@@ -2,7 +2,10 @@ package view;
 
 import java.awt.Color;
 import java.awt.Dialog;
+import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -23,26 +26,33 @@ public class A_JoinPage extends JPanel {
 	
 	public A_JoinPage(MainFrame mf) {
 		
-		
-		Image icon = new ImageIcon("images/joinin.PNG")
-				.getImage().getScaledInstance(208, 66, 0);
-		
-		
-		
 		a_joinPage = new Dialog(mf, "È¸¿ø°¡ÀÔ");
-		a_joinPage.setBackground(Color.GRAY);
-		a_joinPage.setSize(700, 700);
+		// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+		a_joinPage.setSize(500, 600);
+		Toolkit tk = Toolkit.getDefaultToolkit();
+		Dimension dim = tk.getScreenSize();
+		int xPos = (dim.width / 2) - (a_joinPage.getWidth() / 2);
+		int yPos = (dim.height / 2) - (a_joinPage.getHeight() / 2);
+		a_joinPage.setLocation(xPos, yPos);
 		a_joinPage.setLayout(null);
+		a_joinPage.setUndecorated(true);
+		a_joinPage.setBackground(B_ProjectPage.POPUP_COLOR);
+
 		
-		JLabel ilogo = new JLabel(new ImageIcon(icon));
-		ilogo.setLocation(270,100);
-		ilogo.setSize(208,66);
-		a_joinPage.add(ilogo);
+		JLabel joinLabel = new JLabel("È¸¿ø°¡ÀÔ");
+		joinLabel.setLocation(180,0);
+		joinLabel.setSize(208,66);
+		joinLabel.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 40));
+		joinLabel.setForeground(Color.WHITE);
+		a_joinPage.add(joinLabel);		
 		
+		// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 		
 		JLabel id = new JLabel("¾ÆÀÌµð");
 		id.setLocation(180, 180);
 		id.setSize(150, 50);
+		id.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 15));
+		id.setForeground(Color.WHITE);
 		a_joinPage.add(id);
 		
 		JButton check = new JButton("¾ÆÀÌµð Áßº¹È®ÀÎ");
@@ -58,6 +68,8 @@ public class A_JoinPage extends JPanel {
 		JLabel pwd = new JLabel("ºñ¹Ð¹øÈ£");
 		pwd.setLocation(180, 230);
 		pwd.setSize(150, 50);
+		pwd.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 15));
+		pwd.setForeground(Color.WHITE);
 		a_joinPage.add(pwd);
 		
 		JTextField pwdt = new JTextField(20);
@@ -68,6 +80,8 @@ public class A_JoinPage extends JPanel {
 		JLabel pwd1 = new JLabel("ºñ¹Ð¹øÈ£ È®ÀÎ");
 		pwd1.setLocation(180, 280);
 		pwd1.setSize(150, 50);
+		pwd1.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 15));
+		pwd1.setForeground(Color.WHITE);
 		a_joinPage.add(pwd1);
 		
 		JTextField pwdt1 = new JTextField(20);
@@ -78,6 +92,8 @@ public class A_JoinPage extends JPanel {
 		JLabel name = new JLabel("ÀÌ¸§");
 		name.setLocation(180, 330);
 		name.setSize(150, 50);
+		name.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 15));
+		name.setForeground(Color.WHITE);
 		a_joinPage.add(name);
 		
 		JTextField namet = new JTextField(20);
@@ -88,6 +104,8 @@ public class A_JoinPage extends JPanel {
 		JLabel gender = new JLabel("¼ºº°(³²ÀÚ/¿©ÀÚ)");
 		gender.setLocation(180, 380);
 		gender.setSize(150, 50);
+		gender.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 15));
+		gender.setForeground(Color.WHITE);
 		a_joinPage.add(gender);
 		
 		JTextField gendert = new JTextField(20);
@@ -98,6 +116,8 @@ public class A_JoinPage extends JPanel {
 		JLabel phone = new JLabel("¿¬¶ôÃ³");
 		phone.setLocation(180, 430);
 		phone.setSize(150, 50);
+		phone.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 15));
+		phone.setForeground(Color.WHITE);
 		a_joinPage.add(phone);
 		
 		JTextField phonet = new JTextField(20);
@@ -108,6 +128,8 @@ public class A_JoinPage extends JPanel {
 		JLabel email = new JLabel("ÀÌ¸ÞÀÏ");
 		email.setLocation(180, 480);
 		email.setSize(150, 50);
+		email.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 15));
+		email.setForeground(Color.WHITE);
 		a_joinPage.add(email);
 		
 		JTextField emailt = new JTextField(20);
