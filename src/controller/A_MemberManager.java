@@ -26,6 +26,7 @@ public class A_MemberManager {
 		if(list==null) {
 			
 			list = new ArrayList<A_Member>();
+			
 		}
 		//리스트에 member 객체 추가
 		list.add(a_Member);
@@ -84,6 +85,13 @@ public class A_MemberManager {
 	
 	public void idcheck(String id) {
 		ArrayList<A_Member> list = md.readMemberList();
+		
+		if(list == null) {
+			
+			JOptionPane.showMessageDialog(null, "사용할 수 있는 아이디 입니다.");
+			list = new ArrayList<A_Member>();
+		}
+		
 		for(int i =0; i<list.size(); i++) {
 			if(list.get(i).getId().equals(id)) {
 				JOptionPane.showMessageDialog(null, "사용중인 아이디 입니다.");

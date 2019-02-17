@@ -24,6 +24,7 @@ public class A_MemberDao {
 	
 	//파일에서 리스트 읽어오기
 	public ArrayList<A_Member> readMemberList(){
+		
 		ObjectInputStream ois = null;
 		ArrayList<A_Member> list = null;
 		
