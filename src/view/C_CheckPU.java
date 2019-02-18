@@ -11,6 +11,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.HashSet;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JColorChooser;
 import javax.swing.JComboBox;
@@ -66,16 +67,18 @@ public class C_CheckPU extends JPanel implements ActionListener{
 		checkpu= new Dialog(mf, "할일 생성");
 
 		checkpu.setBounds(200, 100, 500, 680);
-		checkpu.setResizable(false);     	//프레임 고정
-		checkpu.setUndecorated(true);		//상태바 없애기
-		checkpu.setLayout(null);
 
 		Toolkit tk = Toolkit.getDefaultToolkit();
 		Dimension dim = tk.getScreenSize();
 		int xPos = (dim.width /2 )  - (checkpu.getWidth() / 2);
 		int yPos = (dim.height / 2) - (checkpu.getHeight() / 2);
-
 		checkpu.setLocation(xPos, yPos);
+
+		checkpu.setResizable(false);     	//프레임 고정
+		checkpu.setUndecorated(true);		//상태바 없애기
+		
+		checkpu.setBackground(new Color(66, 66, 66, 220));
+		checkpu.setLayout(null);
 
 		//할일 이름이뜨는 부분 
 		//CreatePU 에서 JTextField wT에 입력한 값이 들어감
@@ -98,17 +101,31 @@ public class C_CheckPU extends JPanel implements ActionListener{
 		});
 
 		JXDatePicker term1DayPicker = new DatePicker().getDatePicker();
+		JButton term1DayPicker_pick = (JButton) term1DayPicker.getComponent(1);
+		ImageIcon term1Icon = new ImageIcon("images/Calendar.png");
+		term1DayPicker_pick.setIcon(term1Icon);
+		term1DayPicker_pick.setBorderPainted(false);
+		term1DayPicker_pick.setFocusPainted(false);
+		term1DayPicker_pick.setContentAreaFilled(false);
 		term1DayPicker.setSize(120, 40);
 		term1DayPicker.setLocation(80, 70);
+		
 		checkpu.add(term1DayPicker);
 
 		JLabel wave = new JLabel(" ~ ");
 		wave.setSize(100, 25);
-		wave.setLocation(230, 85);
-		wave.setFont(new Font("Serif",Font.BOLD,15));
+		wave.setLocation(230, 80);
+		wave.setForeground(color.WHITE);
+		wave.setFont(new Font("맑은 고딕",Font.BOLD,20));
 
 
 		JXDatePicker term2DayPicker = new DatePicker().getDatePicker();
+		JButton term2DayPicker_pick = (JButton) term2DayPicker.getComponent(1);
+		ImageIcon term2Icon = new ImageIcon("images/Calendar.png");
+		term2DayPicker_pick.setIcon(term2Icon);
+		term2DayPicker_pick.setBorderPainted(false);
+		term2DayPicker_pick.setFocusPainted(false);
+		term2DayPicker_pick.setContentAreaFilled(false);
 		term2DayPicker.setSize(120, 40);
 		term2DayPicker.setLocation(300, 70);
 		checkpu.add(term2DayPicker);
@@ -125,13 +142,15 @@ public class C_CheckPU extends JPanel implements ActionListener{
 		JLabel addMember = new JLabel("할당자");
 		addMember.setSize(100, 70);
 		addMember.setLocation(50, 150);
-		addMember.setFont(new Font("Serif",Font.BOLD,15));
+		addMember.setFont(new Font("맑은 고딕",Font.BOLD,15));
+		addMember.setForeground(color.WHITE);
 
 		//InvitePU로 이동한다 초대버튼을 누르면 할당자가 초대 된다
 		/*JButton*/ iB = new JButton("+");	
-		iB.setFont(new Font("Serif",Font.BOLD,15));
+		iB.setFont(new Font("맑은 고딕",Font.BOLD,15));
 		iB.setSize(60, 30);
 		iB.setLocation(80, 170);
+		iB.setForeground(color.WHITE);
 
 
 
@@ -163,9 +182,10 @@ public class C_CheckPU extends JPanel implements ActionListener{
 		asscom.setSelectedIndex(0);
 
 		JLabel label = new JLabel("라벨");
-		label.setFont(new Font("Serif",Font.BOLD,15));
+		label.setFont(new Font("맑은 고딕",Font.BOLD,15));
 		label.setSize(40,50);
 		label.setLocation(50,210);
+		label.setForeground(color.WHITE);
 
 		/*JTextField*/ label_Text = new JTextField(10);
 		label_Text.setText(work.getLabel_name());
@@ -195,7 +215,10 @@ public class C_CheckPU extends JPanel implements ActionListener{
 		JLabel feedback = new JLabel("피드백");	
 		feedback.setSize(100, 70);
 		feedback.setLocation(50, 270);
-		iB.setFont(new Font("Serif",Font.BOLD,18));
+		feedback.setFont(new Font("맑은 고딕", Font.BOLD, 15));
+		feedback.setForeground(color.WHITE);
+		iB.setFont(new Font("맑은 고딕",Font.BOLD,18));
+		
 
 		iB.addActionListener(this);
 
@@ -217,6 +240,8 @@ public class C_CheckPU extends JPanel implements ActionListener{
 		JLabel fDL = new JLabel("피드백내용");	
 		fDL.setSize(100, 70);
 		fDL.setLocation(50, 365);
+		fDL.setFont(new Font("맑은 고딕", Font.BOLD, 15));
+		fDL.setForeground(color.WHITE);
 
 		//피드백을 을 입력하면, 이곳에 저장 된다
 		/*JTextArea*/ fa = new JTextArea();

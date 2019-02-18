@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.Color;
 import java.awt.Dialog;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -42,6 +43,8 @@ public class C_SprintDialog extends JPanel {
 		this.message = message;
 
 		C_SprintDialog = new Dialog(mainframe,"«“¥Á¿⁄ º±≈√√¢");
+		C_SprintDialog.setUndecorated(true);
+		C_SprintDialog.setBackground(new Color(66, 66, 66,220));
 		C_SprintDialog.setLayout(null);
 		C_SprintDialog.setSize(350,350);
 
@@ -54,7 +57,8 @@ public class C_SprintDialog extends JPanel {
 
 
 		JLabel title = new JLabel(message);
-		title.setFont(new Font("Serif",Font.BOLD, 15));
+		title.setFont(new Font("∏º¿∫ ∞ÌµÒ",Font.BOLD, 15));
+		title.setForeground(Color.white);
 		title.setSize(180, 50);
 		title.setLocation(15, 30);
 

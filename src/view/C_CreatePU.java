@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.Color;
 import java.awt.Dialog;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -9,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -46,8 +48,11 @@ public class C_CreatePU extends JPanel{
 		int yPos = (dim.height / 2) - (cp.getHeight() / 2);
 
 		cp.setLocation(xPos, yPos);
+		cp.setBackground(new Color(66,66,66,220));
 
 		JLabel wL = new JLabel("«“¿œ ¿Ã∏ß");	
+		wL.setFont(new Font("∏º¿∫∞ÌµÒ", Font.BOLD, 15));
+		wL.setForeground(Color.white);
 		wL.setLocation(30, 4);
 		wL.setSize(100, 100);
 
@@ -62,29 +67,44 @@ public class C_CreatePU extends JPanel{
 
 		//±‚∞£ Label
 		JLabel L_tearm = new JLabel("±‚∞£");
-		L_tearm.setFont(new Font("Serif",Font.BOLD,15));
+		L_tearm.setFont(new Font("∏º¿∫ ∞ÌµÒ",Font.BOLD,15));
+		L_tearm.setForeground(Color.WHITE);
 		L_tearm.setSize(100, 25);					
 		L_tearm.setLocation(30, 80);    	//30,180
 
 
 		JXDatePicker term1DayPicker = new DatePicker().getDatePicker();
+		JButton term1DayPicker_pick = (JButton) term1DayPicker.getComponent(1);
+		ImageIcon term1Icon = new ImageIcon("images/Calendar.png");
+		term1DayPicker_pick.setIcon(term1Icon);
+		term1DayPicker_pick.setBorderPainted(false);
+		term1DayPicker_pick.setFocusPainted(false);
+		term1DayPicker_pick.setContentAreaFilled(false);
 		term1DayPicker.setLocation(30, 110);	//30,210
 		term1DayPicker.setSize(120, 40);
 		cp.add(term1DayPicker);
 
 		JLabel wave = new JLabel(" ~ ");
 		wave.setSize(60, 50);
-		wave.setFont(new Font("",Font.BOLD,10));
+		wave.setFont(new Font("∏º¿∫ ∞ÌµÒ",Font.BOLD,15));
+		wave.setForeground(Color.white);
 		wave.setLocation(170, 100);
 
 
 		JXDatePicker term2DayPicker = new DatePicker().getDatePicker();
+		JButton term2DayPicker_pick = (JButton) term2DayPicker.getComponent(1);
+		ImageIcon term2Icon = new ImageIcon("images/Calendar.png");
+		term2DayPicker_pick.setIcon(term2Icon);
+		term2DayPicker_pick.setBorderPainted(false);
+		term2DayPicker_pick.setFocusPainted(false);
+		term2DayPicker_pick.setContentAreaFilled(false);
 		term2DayPicker.setLocation(220, 110);
 		term2DayPicker.setSize(120, 40);
 		cp.add(term2DayPicker);
 
 		JLabel dL = new JLabel("ºº∫Œ ≥ªøÎ");
-		//dL.setFont(new Font("Serif",Font.BOLD,15));
+		dL.setFont(new Font("∏º¿∫ ∞ÌµÒ",Font.BOLD,15));
+		dL.setForeground(Color.WHITE);
 		dL.setLocation(30, 130);			//30,40
 		dL.setSize(100, 100);
 
@@ -107,6 +127,8 @@ public class C_CreatePU extends JPanel{
 
 		//worksubject !!!!!!!
 		JLabel work_subjectLable = new JLabel("Label");
+		work_subjectLable.setFont(new Font("∏º¿∫ ∞ÌµÒ",Font.BOLD,15));
+		work_subjectLable.setForeground(Color.white);
 		work_subjectLable.setSize(110, 110);
 		work_subjectLable.setLocation(30, 235);
 

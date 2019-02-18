@@ -28,6 +28,7 @@ public class C_ProgressPanel extends JPanel implements ActionListener,MouseListe
 	private C_ProgressPanel progressPanel;
 	private C_SprintMainPage sprintMain;
 	
+	
 	private JTable progress_Table;
 	private JButton Add_Work;
 	
@@ -48,14 +49,17 @@ public class C_ProgressPanel extends JPanel implements ActionListener,MouseListe
 		this.setLayout(new BorderLayout());
 		
 		//In Progress이라고 글자 나오는 거
+		
+		
 		JPanel Progress_Title_panel = new JPanel();
-		Progress_Title_panel.setPreferredSize(new Dimension(340,55));
-		Progress_Title_panel.setBackground(Color.decode("#f1c40f"));
-
+	
+		Progress_Title_panel.setPreferredSize(new Dimension(340,45));
+		Progress_Title_panel.setBackground(Color.decode("#FAF4C0"));
+		
 
 		JLabel Progress_Title_label = new JLabel("In Progress");
-		Progress_Title_label.setFont(new Font("Serif",Font.BOLD,25));
-		Progress_Title_label.setForeground(Color.white);
+		Progress_Title_label.setFont(new Font("Tahoma",Font.PLAIN,25));
+		Progress_Title_label.setForeground(Color.DARK_GRAY);
 
 		Progress_Title_panel.add(Progress_Title_label);
 

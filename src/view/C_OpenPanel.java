@@ -49,13 +49,13 @@ public class C_OpenPanel extends JPanel implements ActionListener,MouseListener{
 
 		//OPEN이라고 글자 나오는 거
 		JPanel Open_Title_panel = new JPanel();
-		Open_Title_panel.setPreferredSize(new Dimension(340,55));
-		Open_Title_panel.setBackground(Color.decode("#2ecc71"));
+		Open_Title_panel.setPreferredSize(new Dimension(340,45));
+		Open_Title_panel.setBackground(Color.decode("#B0D0D6"));
 
 
 		JLabel Open_Title_label = new JLabel("OPEN");
-		Open_Title_label.setFont(new Font("Serif",Font.BOLD,25));
-		Open_Title_label.setForeground(Color.white);
+		Open_Title_label.setFont(new Font("Tahoma",Font.PLAIN,25));
+		Open_Title_label.setForeground(Color.DARK_GRAY);
 
 		Open_Title_panel.add(Open_Title_label);
 

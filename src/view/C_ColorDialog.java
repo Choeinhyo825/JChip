@@ -42,7 +42,8 @@ public class C_ColorDialog extends JPanel implements ActionListener, ChangeListe
 		this.mf = mf;
 		this.checkpu =checkpu;
 		colordialog = new Dialog(mf,"라벨 색상 생성");
-
+		
+		
 		colordialog.setSize(200, 600);
 		colordialog.setLayout(new BorderLayout());
 		
@@ -50,7 +51,6 @@ public class C_ColorDialog extends JPanel implements ActionListener, ChangeListe
 		Dimension dim = tk.getScreenSize();
 		int xPos = (dim.width /2 )  - (colordialog.getWidth() / 2);
 		int yPos = (dim.height / 2) - (colordialog.getHeight() / 2);
-
 		colordialog.setLocation(xPos, yPos);
 		
 		preview = new JLabel("입력한 글자", JLabel.CENTER);
